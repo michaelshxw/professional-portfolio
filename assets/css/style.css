@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'acetone';
+  src: url('../fonts/acetone.otf');
+}
+
+@font-face {
+font-family: 'roboto';
+src: url('../fonts/roboto.ttf');
+}
+
+@font-face {
+  font-family: 'blackout';
+  src: url('../fonts/blackout.ttf');
+}
+
+@font-face {
+  font-family: 'neon';
+  src: url('../fonts/neon.otf');
+}
+
+@font-face {
+  font-family: 'bastian';
+  src: url('../fonts/bastian.ttf');
+}
+
+h1 {
+  font-family: 'neon';
+  font-size: 70px;
+}
+
+.navbar-brand {
+  font-size: 25px;
+}
+
+.navbar-nav a {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 17px;
+  margin-left: 15px;
+}
+
+a:hover {
+  opacity: .5;
+  transition: all .3s ease;
+}
+
+#subtitle {
+  font-family: 'roboto'; 
+  font-size: 18px;
+}
+
+header {
+  margin-top: 120px;
+}
+
+/* from old portfolio */
+
+h3 {
+  font-family: 'bastian';
+  font-size: 5vw;
+  font-weight: lighter;
+  padding: 0px 60px;
+  margin-top: 0px;
+}
+
+/* give each section padding so they aren't touching each other */
+section {
+  padding-top: 100px;
+}
+
+#about {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 200px;
+}
+
+#about h3 {
+  float: left;
+  margin-bottom: 100px;
+}
+
+/* center about section image and paragraph */
+#about img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40vw;
+}
+
+/* WORK SECTION */
+
+/* spacing above gallery and header */
+.gallery {
+  padding-top: 50px;
+}
+
+/* give a width of each gallery figure and padding, add grayscale filter */
+.gallery figure {
+  width: 33.3%;
+  padding: 20px;
+  opacity: 0.8;
+  transition: all .2s ease;
+  filter: grayscale(0%)
+}
+
+/* make first gallery image 100% width and 50% height to meet acceptance criteria */
+.gallery figure:first-child {
+  width: 100%;
+  height: 50%;
+}
+
+/* make each image fit it's own container rather than being full size */
+.gallery figure img {
+  width: 100%;
+}
+
+/* position the gallery, give it a width */
+.gallery {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  bottom: 50px;
+  margin: auto;
+}
+
+/* when hovering over the image, opacity becomes 0.5 and grayscale appears  */
+.gallery figure:hover {
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+/* figcaption is used for the title of each image "Example 5", etc */
+figcaption {
+  font-size: 4vw;
+  text-align: center;
+  font-family: bastian;
+  color: white;
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%, -50%);
+} 
+
+/* change font-size for first figure as its displayed at a different size */
+#fig1 {
+  font-size: 4vw;
+}
+
+/* CONTACT SECTION */
+
+
+#contact {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+
+#contact h3 {
+  padding: 50px;
+  margin-top: -150px;
+}
+
+/* space all buttons evenly and display flex */
+.contact-list ul {
+  padding-left: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  font-family: 'acetone';
+  font-size: 35px;
+}
+
+/* styling for each button in the contact list  */
+.contact-list a {
+  padding: 8px 45px;
+  color: rgb(41, 41, 41);
+  text-decoration: none;
+  border: solid rgb(41, 41, 41) 4px;
+}
+
+/* COPYRIGHT INFO */
+
+/* center the footer content */
+footer {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 150px;
+  padding-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+h4 {
+  font-size: 14px;
+}
