@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand bg-light navbar-light text-uppercase fixed-top" style="padding: 20px 50px;">
         <a class="navbar-brand text-dark" href="#">Home</a>
         <div class="navbar-nav">
@@ -27,7 +26,7 @@
         <div class="container d-flex align-items-center flex-column">
             <img src="./assets/images/avatar.jpg" alt="avatar" style="width: 250px;" id="headerImg" />
             <h1 id="title">MICHAEL SHAW</h1>
-            <p id="subtitle">Web Developer | Photographer | Journalist</p>
+            <p id="subtitle">I like to design beautiful things</p>
             <a href="#about" class="text-dark" id="downarrow"><i class="fas fa-chevron-circle-down"
                     style="width: 50px;"></i></a>
         </div>
@@ -37,7 +36,7 @@
         <div id="about">
             <h3 class="text-white">Hi! I'm Michael. Nice to meet you.</h3>
             <p class="text-white">
-                I'm only just starting out on my journey as a web designer and I couldn't be more excited. I've
+                I'm only just starting out on my journey as a web designer but I couldn't be more excited. <br> I've
                 completed a minor in Web Design at Curtin University in Perth, WA and I'm currently completing a Coding
                 Bootcamp at the University of Western Australia.
             </p>
@@ -115,49 +114,115 @@
 
     <section id="work">
         <h3>Recent Work I've Done</h3>
-        <div class="gallery">
-        
-            <figure><a class=""
-                    href="target=https://github.com/michaelshxw/01-HTML-CSS-and-Git-Code-Refactor-Homework-Assignment">
-                    <img src="./assets/images/example1.jpg" alt="placeholder image">
-                    <h3 class="overlay" id="fig1">Code Refractor: Week 1 Homework</h3>
-                </a></figure>
-            <figure><a href="https://github.com/michaelshxw"><img src="./assets/images/example3.jpg"
-                        alt="placeholder image">
-                    <figcaption>Example 2</figcaption>
-                </a></figure>
-            <figure><a href="https://github.com/michaelshxw"><img src="./assets/images/example2.jpg"
-                        alt="placeholder image">
-                    <figcaption>Example 3</figcaption>
-                </a></figure>
-            <figure><a href="https://github.com/michaelshxw"><img src="./assets/images/example4.jpg"
-                        alt="placeholder image">
-                    <figcaption>Example 4</figcaption>
-                </a></figure>
-            <!-- template for future examples -->
-            <!-- <figure><a href="https://github.com/michaelshxw"><img src="./assets/images/example4.jpg"
-                        alt="placeholder image">
-                    <figcaption>Example 5</figcaption>
-                </a></figure> -->
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div id="gallery-grid" class="row">
+                <div class="gallery-item col-sm-6 col-md-12 col-lg-6 mb-4">
+                    <a href="https://github.com/michaelshxw/The-Real-Meal-App" class="item-content">
+                        <div class="gallery-text text-white">
+                            <h3 id="gallery-text-1">The Real Meal App</h3>
+                            <span>A custom meal plan generator</span>
+                        </div>
+                        <img class="img-fluid" src="./assets/images/realmeal.png">
+                    </a>
+                </div>
+                <div class="gallery-item col-sm-6 col-md-6 col-lg-6 mb-4">
+                    <a href="https://github.com/michaelshxw/01-HTML-CSS-and-Git-Code-Refactor-Homework-Assignment"
+                        class="item-content">
+                        <div class="gallery-text text-white">
+                            <h3>Code Quiz</h3>
+                            <span>A JavaScript Code Quiz</span>
+                        </div>
+                        <img class="img-fluid" src="./assets/images/codequiz.png">
+                    </a>
+                </div>
+                <div class="gallery-item col-sm-6 col-md-6 col-lg-4 mb-4">
+                    <a href="https://github.com/michaelshxw/weather-dashboard" class="item-content">
+                        <div class="gallery-text text-white">
+                            <h3>Weather Dashboard</h3>
+                            <span>Need to know the weather in your city? Search for it here</span>
+                        </div>
+                        <img class="img-fluid" src="./assets/images/weather.png">
+                    </a>
+                </div>
+                <div class="gallery-item col-sm-6 col-md-6 col-lg-4 mb-4">
+                    <a href="https://github.com/michaelshxw/Work-Day-Scheduler" class="item-content">
+                        <div class="gallery-text text-white">
+                            <h3>Work Day Scheduler</h3>
+                            <span>A task manager / calendar for your work day</span>
+                        </div>
+                        <img class="img-fluid" src="./assets/images/scheduler.png">
+                    </a>
+                </div>
+                <div class="gallery-item col-sm-6 col-md-6 col-lg-4 mb-4">
+                    <a href="https://github.com/michaelshxw/JavaScript-Password-Generator" class="item-content">
+                        <div class="gallery-text text-white">
+                            <h3>Password Generator</h3>
+                            <span>A JavaScript built random password generator</span>
+                        </div>
+                        <img class="img-fluid" src="./assets/images/passgen.png">
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="contact">
-        <h3>Contact</h3>
+        <h3 class="text-white">Contact</h3>
+        <form>
+            <label class="text-white" for="formDescription">Fill out the form below:</label>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <input type="text" class="form-control" placeholder="First name">
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <input type="text" class="form-control" placeholder="Last name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <input type="phone" class="form-control" id="inputPhone" placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="inputText" placeholder="Message...">
+            </div>
+            <button type="submit" class="btn btn-outline-light">Submit</button>
+
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="contact-list">
+            <ul>
+                <li><a class="text-white" href="mailto:michaelshxw@gmail.com">Email</a></li>
+                <li><a class="text-white" href="Resume.docx" target="_blank">Resume</a></li>
+                <li><a class="text-white" href="https://github.com/michaelshxw">Github</a></li>
+                <li><a class="text-white" href="https://www.linkedin.com/in/michaelshxw/">LinkedIn</a></li>
+            </ul>
+        </div>
+        <!-- <div class="contact-list">
             <ul>
                 <li><a href="mailto:michaelshxw@gmail.com">Email</a></li>
                 <li><a href="https://github.com/michaelshxw">Resume</a></li>
                 <li><a href="https://github.com/michaelshxw">Github</a></li>
                 <li><a href="https://www.linkedin.com/in/michaelshxw/">LinkedIn</a></li>
             </ul>
-        </div>
+        </div> -->
     </section>
 
     <footer>
         <h4>&copy; Michael Shaw 2021</h4>
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.js"
+        integrity="sha512-678bHRnILWQudsPcjDbSoYtwimEk8yPq7BBWeJaFoSHPf7Ob7N7au8M49yY9Wbpmmi0PvDzf3Rca1mbmYQLAxQ=="
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>

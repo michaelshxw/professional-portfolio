@@ -63,7 +63,6 @@ header {
 
 #headerImg {
   margin-top: 200px;
-
 }
 
 #downarrow {
@@ -71,6 +70,10 @@ header {
   top: 190px;
   font-size: 90px;
 }
+
+
+
+
 /* from old portfolio */
 
 section {
@@ -85,7 +88,7 @@ h3 {
   text-align: center;
 }
 
-/* ABOUT SECTION */
+/* ===== ABOUT SECTION ===== */
 
 #about {
   padding-top: 150px;
@@ -113,9 +116,9 @@ h3 {
 
 .about-cards {
   width: 800px;
-  position: relative;bottom: 500px;
+  position: relative;
+  bottom: 500px;
   left: 50%;
-
   transform: translate(-50%, 50%);
 }
 
@@ -141,80 +144,112 @@ h5:hover, h6:hover {
 
 }
 
+/* ===== GALLERY ===== */
+/* css from bootstrap made, researched and understood (trial and error mostly) - adapted to be my own  */
+/* link: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/ */
 
-
-
-
-/* WORK SECTION */
-
-#work {
+.gallery-item .item-content {
+  filter: drop-shadow(0 0 2px black);
   position: relative;
-  bottom: 100px;
+  overflow: hidden;
+  display: block;
 }
 
-/* spacing above gallery and header */
-.gallery {
-  padding-top: 50px;
-}
-
-/* give a width of each gallery figure and padding, add grayscale filter */
-.gallery figure {
-  width: 33.3%;
-  padding: 20px;
-  opacity: .9;
-  transition: all .2s ease;
-  filter: grayscale(0%)
-}
-
-/* make first gallery image 100% width and 50% height to meet acceptance criteria */
-.gallery figure:first-child {
-  width: 100%;
-  height: 15%;
-}
-
-/* make each image fit it's own container rather than being full size */
-.gallery figure img {
-  width: 100%;
-}
-
-/* position the gallery, give it a width */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  width: 70%;
-  bottom: 50px;
-  margin: auto;
-}
-
-/* when hovering over the image, opacity becomes 0.5 and grayscale appears  */
-/* .gallery figure:hover {
-  filter: grayscale(100%);
-} */
-
-/* figcaption is used for the title of each image, "Example 5", etc */
-figcaption {
-  font-size: 24px;
-  text-align: center;
-  font-family: 'bastian';
-  color: white;
+/* adds a fade over the image to be applied when hovered */
+.gallery-item .item-content:after {
   position: absolute;
-  left: 50%;
-  bottom: 50px;
-  transform: translate(-50%, 50%);
-} 
-
-/* change font-size for first figure as its displayed at a different size */
-#fig1 {
-  bottom: 100px;
-  font-size: 50px;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s all ease-in-out;
 }
 
-/* CONTACT SECTION */
+/* on hover, make the image zoom slightly, smoothly */
+.gallery-item .item-content img {
+  transform: scale(1);
+  transition: .3s transform ease;
+
+}
+
+/* position gallery text to be centered */
+.gallery-text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  /* z-index positions the text at the front */
+  z-index: 3; 
+  transform: translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 20px;
+  transition: .3s all ease;
+}
+
+/* gallery text styling */
+
+.gallery-text h3 {
+  font-size: 30px;
+}
+
+.gallery-text span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* zoom in on image on hover */
+.item-content:hover img {
+  transform: scale(1.05);
+}
+
+/* display linear gradient on hover*/
+.item-content:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* display text content on hover */
+.item-content:hover .gallery-text {
+  margin-top: 0px;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* ===== CONTACT SECTION ===== */
+
+#contact {
+  padding-top: 150px;
+  background: #7510f6;
+  padding-bottom: 100px;
+}
 
 #contact h3 {
   padding: 50px;
   margin-top: -150px;
 }
+
+form {
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 20px;
+}
+
 
 /* space all buttons evenly and display flex */
 .contact-list ul {
@@ -235,10 +270,12 @@ figcaption {
   padding: 8px 45px;
   color: rgb(41, 41, 41);
   text-decoration: none;
-  border: solid rgb(41, 41, 41) 4px;
+  border: 2px solid white;
+  background-color: blueviolet;
+  font-size: 30px;
 }
 
-/* COPYRIGHT INFO */
+/* ===== COPYRIGHT INFO ===== */
 
 /* center the footer content */
 footer {
@@ -267,6 +304,86 @@ h4 {
   font-family: 'bastian';
 }
 
-.container:hover .overlay {
-  opacity: 1;
+
+/* ===== MEDIA QUERIES ===== */
+
+@media screen and (max-width: 1000px) {
+
+  #about {
+    width: 80%;
+  }
+  button {
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 50px;
+  }
+
+  #contact {
+    padding-bottom: 300px;
+  }
+
+  .contact-list ul {
+    padding-top: 100px;
+    width: 500%;
+    display: block;
+    text-align: center;
+  }
+
+  .contact-list li {
+    margin-top: 10px;
+  }
+
+  .about-cards {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  #about h3 {
+    font-size: 30px;
+  }
+
+  .about-cards {
+    margin-top: -400px;
+    padding-bottom: 600px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+
+  header {
+    height: 50vh;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  #downarrow {
+    padding: 0;
+    top: 00px;
+  }
+
+  .about-cards {
+    bottom: 850px;
+  }
+
+  #work {
+    bottom: 300px;
+    position: relative;
+  }
+
+  #contact {
+    padding-top: 0px;
+  }
+
+  .navbar-brand {
+    font-size: 15px;
+    margin-left: -30px;
+  }
+
+  .navbar-nav {
+    display: block;
+  }
 }
