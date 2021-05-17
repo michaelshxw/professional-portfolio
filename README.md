@@ -22,4 +22,4 @@ To install this application, a text editor such as Visual Studio Code is require
 To install this code, download the zip file, or use GitHub's guidelines to clone the repository
 
 ### Authors
-* **Michael Shaw** (HTML, CSS and JavaScript) [GitHub Profile](https://github.com/michaelshxw)
+* **Michael Shaw** (HTML and CSS) [GitHub Profile](https://github.com/michaelshxw)
